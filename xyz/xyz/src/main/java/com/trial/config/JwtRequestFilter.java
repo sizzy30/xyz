@@ -22,7 +22,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         if(header!=null && header.startsWith("Bearer ")){
             String token = header.substring(8, header.length() - 1);
             String username=jwtService.getUsername(token);
-            System.out.println(username);
+            System.out.println(token);
         }
 
     }
