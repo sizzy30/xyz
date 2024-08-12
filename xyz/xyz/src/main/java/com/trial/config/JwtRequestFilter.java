@@ -23,6 +23,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             String token = header.substring(8, header.length() - 1);
             String username=jwtService.getUsername(token);
             System.out.println(token);
+            System.out.println(username);
         }
 
     }
